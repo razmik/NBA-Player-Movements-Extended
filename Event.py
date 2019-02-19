@@ -142,8 +142,8 @@ class Event:
         ax.add_patch(ball_circle)
 
         anim = animation.FuncAnimation(
-                         fig, update_radius,
-                         fargs=(player_circles, ball_circle, annotations, clock_info),
+                         fig, self.update_radius,
+                         fargs=(player_circles, ball_circle, annotations, clock_info, 1, 1),
                          frames=len(self.moments), interval=Constant.INTERVAL)
         court = plt.imread("court.png")
         plt.imshow(court, zorder=0, extent=[Constant.X_MIN, Constant.X_MAX - Constant.DIFF,

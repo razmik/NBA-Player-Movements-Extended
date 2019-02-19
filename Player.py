@@ -10,8 +10,10 @@ The five basketball positions normally employed by organized basketball teams ar
  Typically the point guard is the leader of the team on the court.
 """
 
+
 class Player:
     """A class for keeping info about the players"""
+
     def __init__(self, player, player_dict):
         self.team = Team(player[0])
         self.id = player[1]
@@ -19,3 +21,5 @@ class Player:
         self.y = player[3]
         self.color = self.team.color
         self.position = player_dict[self.id][2]
+        self.jersey = player_dict[self.id][1]
+        self.name = player_dict[self.id][0]

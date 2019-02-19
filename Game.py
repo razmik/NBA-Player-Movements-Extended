@@ -32,7 +32,7 @@ class Game:
         self.all_events = [Event(e) for e in data_frame['events']]
 
     def start(self):
-        self.event.show_updated()
+        self.event.show()
 
     def start_all(self):
 
